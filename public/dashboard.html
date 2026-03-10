@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Chatbot</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo-sidebar">🤖 AI Chat</div>
+
+<div class="profile">
+
+<div class="avatar">U</div>
+
+<div>User</div>
+
+</div>
+
+<button onclick="newChat()">+ New Chat</button>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+
+<!-- CHAT AREA -->
+
+<div class="chat-area">
+
+<div id="chat" class="chat-box"></div>
+
+<div class="input-area">
+
+<input id="message" placeholder="Ask anything...">
+
+<button onclick="sendMessage()">Send</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/chat.js"></script>
+
+<script>
+
+function logout(){
+
+localStorage.clear();
+
+window.location="login.html";
+
+}
+
+function newChat(){
+
+document.getElementById("chat").innerHTML="";
+
+}
+
+</script>
+
+</body>
+
+</html>
